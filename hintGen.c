@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char [] hintGen(char[][], int index){
-int r = rand %6;
-printf("%c is in the word",char[index][r]
+char [] hintGen(char c[][], int index, char ansC[]){
+int r = rand %4;
+for(int i = 0; i < 6; i++){
+if(r == 1){
+ansC[i] = c[index][i];
+}
+}
+return ansC;
 }
