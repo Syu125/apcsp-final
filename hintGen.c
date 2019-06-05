@@ -5,17 +5,17 @@
 int rand (void);
 
 char * hintGen (char c[][7], int index, char ansC[]){
-int r = rand () % 3;
-  
+int r = rand () % 3;  
 for (int i = 0; i < 6; i++){
 	//printf("#: %d\n",r);
 	//printf("%c",c[index][i]);
+
 	if (r == 0){
-        ansC[i] = c[index][i];
-        //printf ("%c %cn", ansC[i], c[index][i]);
-        r = rand () % 3;
+	        ansC[i] = c[index][i];
+        	//printf ("%c %cn", ansC[i], c[index][i]);
+        	r = rand () % 3;
 	}else{
-	    r = rand() % 3;
+		r = rand() % 3;
 	}
 }
 return ansC;
