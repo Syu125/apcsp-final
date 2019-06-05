@@ -39,7 +39,7 @@ return ans;
 }
 
 
-int main (){
+/*int main (){
 srand(time(0));
 
 char c[][7] = { 
@@ -56,4 +56,4 @@ strcpy (r, checkLetters(in, c, 1, ans));
 for(int i = 0; i < 6; i++){
 	printf("%c ", r[i]);
 } 
-}
+}*/
