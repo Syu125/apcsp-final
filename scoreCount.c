@@ -12,8 +12,8 @@ float score(char r[][7], int index){
 	return ret;
 }
 
-int main(){
+/*int main(){
 	char c[][7] = {"__as_f"};
 	float re = score(c, 0);
 	printf("%f\n",re);
-}
+}*/
