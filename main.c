@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "checkLetters.c"
+#include "hintGen.c"
+#include "scoreCount.c"
 
 #define TRUE
 #define FALSE
