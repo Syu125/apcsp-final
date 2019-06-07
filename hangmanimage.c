@@ -3,10 +3,6 @@
 #include <string.h>
 #include <time.h>
 
-int main () 
-{
-        void printImage(int mistakes);
-}
 void printImage (int mistakes) 
 {
         mistakes = 4; 
@@ -92,4 +88,9 @@ void printImage (int mistakes)
                 printf("________\n");
                 }
         }
+}
+int main () 
+{
+        int m = 4;
+        printImage(m);
 }
