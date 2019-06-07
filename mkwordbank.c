@@ -9,28 +9,24 @@
 int main (int argc, char * argv[]) 
 {
 	//Create an array of strings
-	int numwords;
+	int numwords = 20;
 	scanf("%d", &numwords)
-	char inputString[50];
-	scanf("%s", inputString);
-	char wordList[numwords][50];
-	int counter = 0;
-	while (counter < numwords) 
-	{
-		printf("What is word %d?\n", (counter + 1));
-		printf("(Maximum permitted word length is 50 letters)\n");
-		printf("(Lowercase letters ONLY)\n");
-		char inputString[50];
-		scanf("%s", inputString);
+	char inputString[6];
+	("orange", inputString);
+	("apples", inputString);
+	char wordList[numwords][6];
+
 }
+
 //Check if lowercase
 int checkLowercase (char *inputString) 
 {
-	char wordList[numwords][50];
+	int numwords = 20;
+	char wordList[numwords][6];
 	int charindex = 0;
 	while (charindex < strlen(inputString)) 
 	{
-	if (!('a' <= inputString[charindex] && inputString[charindex] <= 'z')) 
+	if (!('a' <= inputString[charindex]) 
 		{
 		return FALSE;
 			}
@@ -44,7 +40,7 @@ int checkLowercase (char *inputString)
 		{
         	//Copy string into word bank
          	int charindex;
-         	for (charindex = 0; charindex < 50; charindex++) {
+         	for (charindex = 0; charindex < 6; charindex++) {
 		wordList[counter][charindex] = inputString[charindex];
         	}
         counter++;
@@ -58,6 +54,7 @@ int checkLowercase (char *inputString)
    	}
 	//Choose a random word
 	srand(time(NULL));
+	int numwords = 20;
 	int wordNum = (int)(rand()%numwords);
 	char *word = &wordList[wordNum][0];
 	printf("%s", word);
