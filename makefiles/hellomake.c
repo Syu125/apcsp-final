@@ -1,3 +1,4 @@
+
 //
 // hellomake.c
 //
@@ -5,16 +6,14 @@
 //
 
 #include <stdio.h>
-
-
-// include a header file
-#include "hellofunc.h"
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include "hellofunc.h"
 
 #define NUMWORDS 20
+
+// include a header file
 
 int main (int argc, char * argv[]) 
 {
@@ -30,9 +29,8 @@ int main (int argc, char * argv[])
 	//Choose a random word
 	srand(time(NULL));
 	int wordNum = (int)(rand()%NUMWORDS);
-	printf("%s\n", wordList[wordNum]);
 
-	char ans[] = "______";
+	char ans[] = "______\n";
 	printImage (guesses);
 
 	while(guesses < 6 && re < 0.99)
@@ -43,7 +41,7 @@ int main (int argc, char * argv[])
 		getchar();
 		if(checkLetters(input, wordList, wordNum, ans)<2)
 			guesses++;
-		printf("%s", ans); 
+		printf("%s\n", ans); 
 		
 		//printf("%d",i);HINT
 		//strcpy (r, hintGen (wordList, i, ans));
@@ -52,16 +50,18 @@ int main (int argc, char * argv[])
 		//hintGen (wordList, index, ansC);
 
 		re = score(ans);
+		printf("Percent guessed correctly: ");
 		printf("%f\n",re);
 	printImage (guesses);
 
 	}
 	if(guesses == 6){
-	printf("You lost\n");
+	printf("You lost!\n");
+	printf("The word was ");
+	printf("%s\n", wordList[wordNum]);
 	}
 	if(re > 0.99){
 	printf("You won\n");
 	}
 
 }
-

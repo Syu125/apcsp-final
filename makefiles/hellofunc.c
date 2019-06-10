@@ -3,6 +3,7 @@
 // always include my own header file
 #include "hellofunc.h"
 
+
 int checkLetters(char input, char word[][7], int index, char ans[]){
 	int close = 0;
 		/*
@@ -118,6 +119,24 @@ void printImage (int mistakes)
                 }
         }
 }
+int rand (void);
+
+char * hintGen (char c[][7], int index, char ansC[]){
+	int r = rand () % 3;  
+	for (int i = 0; i < 6; i++){
+		//printf("#: %d\n",r);
+		//printf("%c",c[index][i]);
+
+		if (r == 0){
+	        	ansC[i] = c[index][i];
+        		//printf ("%c %cn", ansC[i], c[index][i]);
+        		r = rand () % 3;
+		}else{
+			r = rand() % 3;
+		}
+	}
+	return ansC;
+}
 
 float score(char *r)
 {
@@ -131,4 +150,3 @@ float score(char *r)
 	ret = s/6;
 	return ret;
 }
-
