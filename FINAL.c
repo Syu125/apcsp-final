@@ -215,6 +215,5 @@ float score(char *r)
 	}
 	ret = s/6;
 	return ret;
-	printf("The word is &ret percent correct.\n");
 }
 
