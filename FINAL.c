@@ -3,8 +3,6 @@
 #include <string.h>
 #include <time.h>
 
-#define TRUE
-#define FALSE
 #define NUMWORDS 20
 
 void printImage (int mistakes);
